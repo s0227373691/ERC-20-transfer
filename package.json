@@ -6,10 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "node scripts/deploy.js"
   },
   "dependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@openzeppelin/contracts": "^5.0.1",
     "@rainbow-me/rainbowkit": "^1",
+    "colors": "^1.4.0",
+    "hardhat": "^2.19.4",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
