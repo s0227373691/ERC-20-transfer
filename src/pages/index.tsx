@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 
-import { ConnectButton } from '@rainbow-me/rainbowkit';
-import ERC20TokenStat from '@/components/ERC20TokenStat'
-import ERC20TokenCreateButton from '@/components/ERC20TokenCreateButton'
+import { ConnectButton } from "@rainbow-me/rainbowkit";
+import ERC20TokenStat from "@/components/ERC20TokenStat";
+import ERC20TokenCreateButton from "@/components/ERC20TokenCreateButton";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,8 +24,6 @@ export default function Home() {
         <ERC20TokenCreateButton clickFunc={createERC20_Token} />
       </div>
       <ERC20TokenStat />
-
-
     </main>
   );
 }
