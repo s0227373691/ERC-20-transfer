@@ -8,11 +8,6 @@ import ERC20TokenCreateButton from "@/components/ERC20TokenCreateButton";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const createERC20_Token = () => {
-    const _tokenName = window.prompt('Enter the token name')
-
-    console.log(_tokenName)
-  }
   return (
     <main
       className={`flex min-h-screen flex-col items-start gap-4 p-24 ${inter.className}`}
@@ -20,8 +15,10 @@ export default function Home() {
       <ConnectButton />
 
       <div className="w-full flex justify-between text-center sm:text-left">
-        <h1 className="text-2xl font-bold text-amber-200 sm:text-3xl">ERC-20 Tokens</h1>
-        <ERC20TokenCreateButton clickFunc={createERC20_Token} />
+        <h1 className="text-2xl font-bold text-amber-200 sm:text-3xl">
+          ERC-20 Tokens
+        </h1>
+        <ERC20TokenCreateButton />
       </div>
       <ERC20TokenStat />
     </main>

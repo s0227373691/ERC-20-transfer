@@ -17,6 +17,9 @@ dependencies:
   colors:
     specifier: ^1.4.0
     version: 1.4.0
+  dotenv:
+    specifier: ^16.4.1
+    version: 16.4.1
   hardhat:
     specifier: ^2.19.4
     version: 2.19.4(ts-node@10.9.2)(typescript@5.3.3)
@@ -3714,6 +3717,11 @@ packages:
     dependencies:
       esutils: 2.0.3
     dev: true
+
+  /dotenv@16.4.1:
+    resolution: {integrity: sha512-CjA3y+Dr3FyFDOAMnxZEGtnW9KBR2M0JvvUtXNW+dYJL5ROWxP9DUHCwgFqpMk0OXCc0ljhaNTr2w/kutYIcHQ==}
+    engines: {node: '>=12'}
+    dev: false
 
   /duplexify@4.1.2:
     resolution: {integrity: sha512-fz3OjcNCHmRP12MJoZMPglx8m4rrFP8rovnk4vT8Fs+aonZoCwGg10dSsQsfP/E62eZcPTMSMP6686fu9Qlqtw==}
