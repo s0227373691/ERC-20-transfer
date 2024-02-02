@@ -229,8 +229,8 @@
       ]
     },
     "/Users/elmer/Documents/project/erc20-transfer/contracts/ERC20_TokenFactory.sol": {
-      "lastModificationDate": 1706513585618,
-      "contentHash": "60aa93c259c524b40a726e7842db8cb0",
+      "lastModificationDate": 1706895145959,
+      "contentHash": "3dfb09a95bb53c3890319d4d7c235548",
       "sourceName": "contracts/ERC20_TokenFactory.sol",
       "solcConfig": {
         "version": "0.8.20",

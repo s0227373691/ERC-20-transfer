@@ -1,22 +1,20 @@
 import React from "react";
-import { useContractRead } from "wagmi";
+import { useContractWrite } from "wagmi";
 
 import { ERC20_TokenFactory } from "@/config/contracts";
 
 const ERC20TokenCreateButton = () => {
-  const { data } = useContractRead({
+  const { isLoading, write } = useContractWrite({
     abi: ERC20_TokenFactory.abi,
-    address: ERC20_TokenFactory.address,
-    functionName: "erc20Adresses",
-    args: ["0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"],
+    address: ERC20_TokenFactory.address as `0x${string}`,
+    functionName: "createERC20",
   });
-
-  console.log(data);
 
   const createERC20_Token = () => {
     const _tokenName = window.prompt("Enter the token name");
+    const _tokenSymbol = window.prompt("Enter the token symbol");
 
-    console.log(_tokenName);
+    write({ args: [_tokenName, _tokenSymbol] });
   };
   return (
     <button
@@ -24,7 +22,7 @@ const ERC20TokenCreateButton = () => {
       onClick={createERC20_Token}
     >
       <span className="block rounded-full bg-white px-8 py-3 text-sm font-medium group-hover:bg-transparent">
-        Create
+        {isLoading ? "Creating..." : "Create"}
       </span>
     </button>
   );

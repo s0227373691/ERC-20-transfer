@@ -1,6 +1,6 @@
 import React from "react";
 
-const ERC20TokenStat = () => {
+const ERC20TokenStat = ({ address }) => {
   return (
     <article className="w-full flex items-center gap-4 rounded-lg border border-gray-100 bg-white p-6">
       <span className="rounded-full bg-blue-100 p-3 text-blue-600">
@@ -23,7 +23,7 @@ const ERC20TokenStat = () => {
       <div>
         <p className="text-2xl font-medium text-gray-900">$240.94</p>
 
-        <p className="text-sm text-gray-500">Total Sales</p>
+        <p className="text-sm text-gray-500">{address}</p>
       </div>
     </article>
   );
