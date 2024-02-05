@@ -10,6 +10,8 @@
     "deploy": "npx hardhat run --network localhost scripts/deploy.js"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.18",
+    "@heroicons/react": "^2.1.1",
     "@nomicfoundation/hardhat-toolbox": "^4.0.0",
     "@openzeppelin/contracts": "^5.0.1",
     "@rainbow-me/rainbowkit": "^1",
