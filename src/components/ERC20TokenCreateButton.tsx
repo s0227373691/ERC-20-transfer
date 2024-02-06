@@ -12,18 +12,19 @@ const ERC20TokenCreateButton = () => {
 
   const createERC20_Token = () => {
     const _tokenName = window.prompt("Enter the token name");
+    if (_tokenName === null) return;
+
     const _tokenSymbol = window.prompt("Enter the token symbol");
+    if (_tokenSymbol === null) return;
 
     write({ args: [_tokenName, _tokenSymbol] });
   };
   return (
     <button
-      className="group inline-block rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-[2px] text-red-500 hover:text-white focus:outline-none focus:ring active:text-opacity-75"
+      className="px-4 py-2 text-yellow-600 bg-yellow-200 rounded-lg duration-150 hover:bg-yellow-300 active:bg-yellow-400"
       onClick={createERC20_Token}
     >
-      <span className="block rounded-full bg-white px-8 py-3 text-sm font-medium group-hover:bg-transparent">
-        {isLoading ? "Creating..." : "Create"}
-      </span>
+      Create
     </button>
   );
 };

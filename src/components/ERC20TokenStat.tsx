@@ -1,7 +1,7 @@
 import React from "react";
 
 import { ERC20_Token } from "@/config/contracts";
-import { useContractRead, useContractReads } from "wagmi";
+import { useContractReads } from "wagmi";
 console.log(ERC20_Token.abi);
 
 const ERC20TokenStat = ({ address }) => {
@@ -29,32 +29,26 @@ const ERC20TokenStat = ({ address }) => {
     <>
       {isError && <>Error ERC20TokenStat ({address})</>}
       {isSuccess && (
-        <article className="w-full flex items-center gap-4 rounded-lg border border-gray-100 bg-white p-6">
-          <span className="rounded-full bg-blue-100 p-3 text-blue-600">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-8 w-8"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
-              />
-            </svg>
-          </span>
-
-          <div>
-            <p className="text-2xl font-medium text-gray-900">
-              {data[0].result} <span>{data[1].result}</span>
-            </p>
-
-            <p className="text-sm text-gray-500">{address}</p>
+        <li className="flex justify-between gap-x-6 py-5">
+          <div className="flex min-w-0 gap-x-4">
+            <img
+              className="h-12 w-12 flex-none rounded-full bg-gray-50"
+              src="https://previews.123rf.com/images/rastudio/rastudio1712/rastudio171200762/91650083-golden-ethereum-coin-crypto-currency-golden-coin-ethereum-symbol-isolated-on-transparent-background.jpg"
+              alt=""
+            />
+            <div className="min-w-0 flex-auto">
+              <p className="text-sm font-semibold leading-6 text-gray-900">
+                {data[0].result}
+              </p>
+              <p className="mt-1 truncate text-xs leading-5 text-gray-500">
+                {data[1].result}
+              </p>
+            </div>
           </div>
-        </article>
+          <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+            <p className="text-sm leading-6 text-gray-900">{address}</p>
+          </div>
+        </li>
       )}
     </>
   );
